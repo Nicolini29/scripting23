@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Young+Serif&display=swap');
+
+
+/*Body*/
+body,
+html {
+  font-family: 'AR One Sans', sans-serif;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  color: #FFF;
+  font-size: 26px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("images/gandalf_4.jpeg");
+  background-size: cover;
+  /* background-position: center; */
+  height: 70%;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  font-size:40px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+}
+
+.hero-description{
+  margin: 0;
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 35%;
+  color: #FFF;
+  z-index: 9;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.hero .hero-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Young Serif', serif;
+  letter-spacing: 4px;
+}
+
+.heroText {
+  padding-top: 50px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.hero .button {
+  margin-top: 15px;
+}
+
+.hero .excla {
+  opacity: 0;
+  display: none;
+  transition: .3s;
+}
+
+
+/* Button style */
+button.button {
+  background: transparent;
+  border: 2px solid #FFF;
+  border-radius: 50px;
+  padding: 10px 30px;
+  color: #FFF;
+  transition: .3s;
+  cursor: pointer;
+}
+
+button.button:hover {
+  color: #FFF;
+  background: #90EE90;
+  border: 2px solid #90EE90;
+}
+
+
+
+/* Styles for the navigation bar */
+.navbar {
+  overflow: hidden;
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  transition: .3s;
+  background: #000;
+  z-index: 99;
+}
+
+.navbar.active {
+  background: rgba(0,0,0,.5);
+  padding: 0;
+}
+
+.navbar.active .navbar-list {
+  margin: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 20px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #FFF;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: .3s;
+}
+
+.navbar a:hover {
+  color: #90EE90;
+}
+
+/* Styles for the image */
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*References section*/
+a.references {
+  color: #000;
+  font-size: 16px;
+}
+
+a.references:hover {
+  color: #9C9C9C;
+  font-size: 16px;
+}
+
+/* CARD BLOCK */
+.card-block.right .card-block-container {
+  grid-template-areas: "card-text card-img";
+}
+
+.card-block-title {
+  text-align: center;
+  font-size: 32px;
+}
+
+.card-block-container {
+  display: grid;
+  grid-template-areas: "card-img card-text";
+  gap: 40px;
+  padding: 0 180px;
+}
+
+.card-block-text {
+  grid-area: card-text;
+}
+
+.card-block-description {
+  font-size: 18px;
+}
+
+.card-block-image {
+  display: flex;
+  align-items: center;
+}
+
+.card-block-image img {
+  grid-area: card-img;
+  width: 100%;
+}
+
+/* SECTION */
+section {
+  padding: 20px 0 40px;
+}
+
+section.biography {
+  background: #e7cab0;
+}
+
+section.skills {
+  background: #e7cab0;
+}
+
+/* REFERENCES */
+
+.references{
+  background-color: #818181;
+}
+
+.references-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.references-container {
+  display: flex;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto
+}
+
+.references-link {
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #000000;
+  transition: .3s;
+  font-size: 20px;
+  padding: 10px 5px;
+  border-radius: 25px;
+}
+
+
+.references-link:hover {
+  color:#000000;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  background: #90EE90
+}
+
+/* FOOTER */
+
+footer {
+  background: #434343;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer-external {
+  color:#ffffff;
+  margin-left: -40px;
+}
+
+.footer-external:hover {
+  color: #90EE90;
+}
